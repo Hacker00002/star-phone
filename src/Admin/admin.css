@@ -1,0 +1,118 @@
+#admin__form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 35px;
+}
+
+input {
+  border-radius: 15px;
+  padding: 15px 40px;
+  width: 450px;
+  color: #008dff !important;
+  font-size: 17px;
+  border: 2px solid #008dff;
+}
+
+input::placeholder {
+  color: black;
+}
+
+.link {
+  position: relative;
+}
+
+.link .fa-solid {
+  position: absolute;
+  font-size: 20px;
+  color: #008dff;
+  top: 15px;
+  left: 10px;
+}
+
+.btn button {
+  text-align: center;
+  border: 2px solid #008dff;
+  cursor: pointer;
+  width: 450px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 15px;
+  color: black;
+  font-size: 17px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.btn button:hover {
+  background-color: #008dff;
+  color: #fff;
+}
+
+.admin__father h1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+h1 img {
+  width: 70px;
+}
+
+.div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.post {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  gap: 5px;
+}
+
+.custom-bt {
+  width: 100%;
+  color: #fff;
+  border-radius: 15px;
+  padding: 10px 25px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  text-align: center;
+  font-size: 18px;
+}
+
+.btn-153 {
+  background: orange;
+  border: none;
+  z-index: 1;
+}
+.btn-153:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background-color: rgb(255, 196, 86);
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+.btn-153:hover {
+  color: #fff;
+}
+.btn-153:hover:after {
+  left: 0;
+  width: 100%;
+}
+.btn-153:active {
+  top: 2px;
+}

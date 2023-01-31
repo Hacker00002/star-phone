@@ -1,0 +1,15 @@
+.category__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  border-top: 1.5px solid rgba(0, 0, 0, 0.127);
+}
+
+.category__link {
+  color: #000;
+}
+
+.category__link:hover {
+  color: #008dff;
+}
