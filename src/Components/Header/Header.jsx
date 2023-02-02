@@ -97,12 +97,12 @@ const Header = () => {
                 {user?.displayName ? (
                   <div className="logout__father">
                     {/* <button
-                        className="logout logout__fathers btn-15 logout"
-                        onClick={handleSignOut}
-                      >
-                        <i class="fa-solid fa-right-from-bracket"></i>
-                      </button> */}
-                    {/* <a href="/User" className="logout btn-15 logout">
+                      className="logout logout__fathers btn-15 logout"
+                      onClick={handleSignOut}
+                    >
+                      <i class="fa-solid fa-right-from-bracket"></i>
+                    </button>
+                    <a href="/User" className="logout btn-15 logout">
                       <i class="fa-solid fa-user-tie"></i>
                     </a> */}
                   </div>
