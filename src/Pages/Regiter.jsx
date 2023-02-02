@@ -24,7 +24,7 @@ const Register = () => {
 
   useEffect(() => {
     if (user != null) {
-      navigate("/Register");
+      navigate("/Regiter");
     }
   }, [user]);
 
