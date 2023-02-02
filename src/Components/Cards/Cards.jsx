@@ -2,19 +2,27 @@ import { Fragment } from "react";
 import { useEffect, useState } from "react";
 import { db } from "../../firebase-config";
 import { collection, getDocs } from "firebase/firestore";
+import Loader from "../../Loader/Loader";
 import "./cards.css";
 
 const Cards = () => {
+  const [loader, setLoader] = useState(false);
   const [user, setUser] = useState([]);
   const userCollectionRef = collection(db, "users");
 
   useEffect(() => {
+    setLoader(true);
     const getUser = async () => {
       const data = await getDocs(userCollectionRef);
       setUser(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+      setLoader(false);
     };
     getUser();
   }, []);
+
+  if (loader) {
+    return <Loader />;
+  }
 
   return (
     <Fragment>
@@ -26,7 +34,7 @@ const Cards = () => {
                 <div className="discount">
                   <div className="discount__like">
                     <div className="disc">
-                      <p>DISCOUNT</p>
+                      <p>{elem.discount}</p>
                     </div>
                     <div className="like">
                       <i class="fa-solid card__plus shop fa-cart-plus"></i>

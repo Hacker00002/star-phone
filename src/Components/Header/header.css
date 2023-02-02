@@ -6,6 +6,7 @@
 }
 
 .header {
+  width: 100%;
   background-color: #ffffff;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -46,7 +47,7 @@
 .nav__list {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 30px;
 }
 
 .icons {
@@ -54,7 +55,7 @@
 }
 
 .nav__link {
-  font-size: 18px;
+  font-size: 16px;
   display: flex;
   flex-direction: column;
   color: black;
@@ -70,4 +71,64 @@
 
 .nav__link:hover {
   color: #008dff;
+}
+
+.logout {
+  width: 100%;
+  color: #fff;
+  border-radius: 15px;
+  padding: 12px 12px;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  text-align: center;
+  font-size: 15px;
+}
+
+.logouts {
+  width: 100%;
+  color: #fff;
+  border-radius: 15px;
+  padding: 10px 10px;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  text-align: center;
+  font-size: 15px;
+}
+
+.logoutsTwo {
+  width: 100%;
+  color: #fff;
+  border-radius: 15px;
+  padding: 12px 12px;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  text-align: center;
+  font-size: 15px;
+}
+
+.logout .fa-solid {
+  font-size: 20px;
+}
+
+.logout__father {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logout__fathers .fa-solid {
+  transform: rotate(180deg);
+}
+
+.nav__list-itemsTwo .fa-solid {
+  font-size: 20px;
 }

@@ -1,0 +1,126 @@
+#register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.register__form h1 {
+  color: #000;
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 40px;
+}
+
+.input__icons {
+  position: relative;
+}
+
+.input__icons .fa-solid {
+  position: absolute;
+  font-size: 22px;
+  top: 15px;
+  left: 10px;
+}
+
+.btns {
+  position: relative;
+}
+
+.btns .fa-brands {
+  position: absolute;
+  font-size: 20px;
+  z-index: 100;
+  top: 12px;
+  left: 15px;
+  color: #fff;
+}
+
+.btns .fa-solid {
+  position: absolute;
+  font-size: 20px;
+  z-index: 100;
+  top: 12px;
+  left: 15px;
+  color: #fff;
+}
+
+.btn__register {
+  display: flex;
+  gap: 25px;
+}
+
+.custom-bt {
+  width: 100%;
+  color: #fff;
+  border-radius: 15px;
+  padding: 13px 50px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  text-align: center;
+  font-size: 18px;
+}
+
+.btn__sign-up {
+  background: orange;
+  border: none;
+  z-index: 1;
+}
+
+.btn__sign-up:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background-color: rgb(255, 196, 86);
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+.btn__sign-up:hover {
+  color: #fff;
+}
+.btn__sign-up:hover:after {
+  left: 0;
+  width: 100%;
+}
+.btn__sign-up:active {
+  top: 2px;
+}
+
+.btn__signUp {
+  background: #008dff;
+  border: none;
+  z-index: 1;
+}
+
+.btn__signUp:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background-color: #5db6ff;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+.btn__signUp:hover {
+  color: #fff;
+}
+.btn__signUp:hover:after {
+  left: 0;
+  width: 100%;
+}
+.btn__signUp:active {
+  top: 2px;
+}

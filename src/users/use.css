@@ -1,0 +1,119 @@
+.users {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  border-right: 3px solid #008dff;
+  padding-right: 20px;
+}
+
+.user__page {
+  display: flex;
+  gap: 50px;
+}
+
+.users h2 {
+  color: #008dff;
+  font-size: 25px;
+}
+
+.id .fa-solid {
+  font-size: 25px;
+}
+
+.id {
+  margin-top: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.personal .fa-solid {
+  font-size: 25px;
+}
+
+.personal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.orders .fa-solid {
+  font-size: 25px;
+}
+
+.orders {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.emails .fa-solid {
+  font-size: 25px;
+}
+
+.emails {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.logout__btn {
+  position: relative;
+}
+
+.logout__btn .fa-solid {
+  position: absolute;
+  left: 10px;
+  font-size: 22px;
+  top: 9px;
+  transform: rotate(180deg);
+}
+
+.logout__btn .fa {
+  position: absolute;
+  left: 10px;
+  font-size: 22px;
+  top: 9px;
+  transform: rotate(0deg);
+}
+
+.image__personal-data h4 {
+  font-size: 25px;
+  color: #008dff;
+  margin-bottom: 100px;
+}
+
+.avatar img {
+  border-radius: 50%;
+  width: 150px;
+  margin-bottom: 25px;
+  border: 3px solid #008dff;
+}
+
+.avatar {
+  position: relative;
+}
+
+.avatar .fa-solid {
+  position: absolute;
+  bottom: 28px;
+  right: 240px;
+  font-size: 25px;
+  color: #008dff;
+  cursor: pointer;
+}
+
+.user__name {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.user__name h4 span {
+  font-size: 25px;
+  color: #008dff;
+}

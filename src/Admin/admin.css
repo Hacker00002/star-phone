@@ -1,7 +1,7 @@
 #admin__form {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 15px;
   margin-top: 35px;
 }
 
@@ -62,7 +62,7 @@ h1 img {
 .div {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  gap: 20px;
 }
 
 .post {
@@ -72,7 +72,7 @@ h1 img {
   gap: 5px;
 }
 
-.custom-bt {
+.custom-bts {
   width: 100%;
   color: #fff;
   border-radius: 15px;
@@ -94,6 +94,13 @@ h1 img {
   border: none;
   z-index: 1;
 }
+
+.btn-152 {
+  background: red;
+  border: none;
+  z-index: 1;
+}
+
 .btn-153:after {
   position: absolute;
   content: "";
@@ -114,5 +121,28 @@ h1 img {
   width: 100%;
 }
 .btn-153:active {
+  top: 2px;
+}
+
+.btn-152:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background-color: rgb(255, 93, 93);
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+.btn-152:hover {
+  color: #fff;
+}
+.btn-152:hover:after {
+  left: 0;
+  width: 100%;
+}
+.btn-152:active {
   top: 2px;
 }

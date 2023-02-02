@@ -22,6 +22,18 @@ export default () => {
               alt=""
             />
           </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src="https://assets.asaxiy.uz/uploads/banner/desktop/63c92af5a5ece.jpg.webp"
+              alt=""
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src="https://assets.asaxiy.uz/uploads/banner/desktop/63cadd05cd258.jpeg.webp"
+              alt=""
+            />
+          </SwiperSlide>
         </Swiper>
       </div>
     </div>
