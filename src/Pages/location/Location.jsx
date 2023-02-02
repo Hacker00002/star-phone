@@ -1,6 +1,7 @@
 import "./location.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import operator from "../../assets/img/icons8-operator-100.png";
 
 const Location = () => {
   const notify = () => {
@@ -21,7 +22,10 @@ const Location = () => {
       <div className="contact">
         <div className="contact__top">
           <div className="contact__text">
-            <h2>Contact us</h2>
+            <h2>
+              Contact us
+              <img src={operator} alt="" />
+            </h2>
             <p>
               To send us a message, fill in the necessary fields, fields are
               required

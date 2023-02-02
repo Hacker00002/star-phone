@@ -132,3 +132,7 @@
 .nav__list-itemsTwo .fa-solid {
   font-size: 20px;
 }
+
+.fa-right-from-bracket {
+  transform: rotate(180deg);
+}
