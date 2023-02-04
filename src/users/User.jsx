@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { UserAuth } from "../account/google";
 import notfound from "../assets/img/no-image.jpg";
 import "./use.css";
@@ -40,23 +41,27 @@ const Users = () => {
             </div>
             <div className="logout__btn">
               {user?.displayName ? (
-                <a
-                  href="/Register"
-                  onClick={handleSignOut}
-                  className="btn-15 width custom-btn"
-                >
-                  LogOut
-                  <i class="fa-solid fa-right-from-bracket"></i>
-                </a>
+                <Link to={"/  "}>
+                  <a
+                    href="/"
+                    onClick={handleSignOut}
+                    className="btn-15 width custom-btn"
+                  >
+                    LogOut
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                  </a>
+                </Link>
               ) : (
-                <a
-                  href="/Register"
-                  onClick={handleSignOut}
-                  className="btn-15 width custom-btn"
-                >
-                  LogOut
-                  <i class="fa-solid fa-right-from-bracket"></i>
-                </a>
+                <Link to={"/"}>
+                  <a
+                    href="/"
+                    onClick={handleSignOut}
+                    className="btn-15 width custom-btn"
+                  >
+                    LogOut
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                  </a>
+                </Link>
               )}
             </div>
           </div>

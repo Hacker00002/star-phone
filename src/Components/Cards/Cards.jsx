@@ -4,6 +4,7 @@ import { db } from "../../firebase-config";
 import { collection, getDocs } from "firebase/firestore";
 import Loader from "../../Loader/Loader";
 import "./cards.css";
+import { Link } from "react-router-dom";
 
 const Cards = () => {
   const [loader, setLoader] = useState(false);
@@ -24,12 +25,17 @@ const Cards = () => {
     return <Loader />;
   }
 
+  const idElem = (id) => {
+    console.log(id);
+  };
+
   return (
     <Fragment>
       <div className="container">
         <div className="cards__father">
           <div className="cards">
             {user.map((elem) => {
+              console.log(elem.id);
               return (
                 <div className="discount">
                   <div className="discount__like">
@@ -59,9 +65,16 @@ const Cards = () => {
                     <p>{elem.price} uzs</p>
                   </div>
                   <div className="btn">
-                    <a href="#" className="custom-btn btn-15 button__add">
-                      Read more
-                    </a>
+                    <Link to={"/Singl"}>
+                      <a
+                        href="/"
+                        // data-id={elem.id}
+                        onClick={() => idElem(elem.id)}
+                        className="custom-btn btn-15 button__add"
+                      >
+                        Read more
+                      </a>
+                    </Link>
                   </div>
                 </div>
               );

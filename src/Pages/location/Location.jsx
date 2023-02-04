@@ -2,6 +2,7 @@ import "./location.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import operator from "../../assets/img/icons8-operator-100.png";
+import Maps from "../../google-maps/Maps";
 
 const Location = () => {
   const notify = () => {
@@ -99,11 +100,10 @@ const Location = () => {
         theme="light"
       />
       <ToastContainer />
-      <iframe
-        src="https://www.google.com/maps/d/u/0/embed?mid=1XZTfGHG5TMY8hi31W3p2pGuusJJ6ywg&ehbc=2E312F"
-        width="640"
-        height="480"
-      ></iframe>
+      <div className="maps__text">
+        <h2>Our address</h2>
+        <Maps />
+      </div>
     </div>
   );
 };

@@ -2,6 +2,7 @@ import "../styles/signin.css";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react";
 import { auth } from "../Pages/register";
+import { Link } from "react-router-dom";
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
@@ -59,9 +60,11 @@ const SignIn = () => {
           </div>
           <div className="register__btn btns">
             <i class="fa-solid fa-user-pen"></i>
-            <a href="/Register" className="btn__signUp custom-bt">
-              Sing Up
-            </a>
+            <Link to={"/Register"}>
+              <a href="/" className="btn__signUp custom-bt">
+                Sing Up
+              </a>
+            </Link>
           </div>
         </div>
       </form>

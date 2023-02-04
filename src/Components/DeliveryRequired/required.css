@@ -1,0 +1,47 @@
+.required__father {
+  margin-bottom: 50px;
+}
+
+.required__father h1 {
+  text-align: center;
+  color: #008dff;
+  margin-bottom: 50px;
+}
+
+.delivery__payments h3 {
+  color: #008dff;
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+
+.delivery__pr p {
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.delivery__text-one h2 {
+  font-size: 25px;
+  color: #008dff;
+  margin-bottom: 10px;
+}
+
+.delivery__text-one span {
+  font-size: 20px;
+  color: #008dff;
+}
+
+.delivery__requireds {
+  display: flex;
+  gap: 5px;
+}
+
+.delivery__required-father {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.delivery__requireds p {
+  width: 900px;
+}

@@ -179,7 +179,7 @@ const Admin = () => {
           </div>
         </div>
         <div className="cards__father">
-          <div className="cards">
+          <div className="cards card">
             {user.map((elem) => {
               return (
                 <div className="discount">

@@ -62,10 +62,12 @@ const Header = () => {
                   </a>
                 </li>
                 <li className="nav__list-item">
-                  <a href="#" className="nav__link">
-                    <i class="fa-solid icons fa-truck-ramp-box"></i>
-                    delivery
-                  </a>
+                  <Link to={"/Delivery"}>
+                    <a href="/" className="nav__link">
+                      <i class="fa-solid icons fa-truck-ramp-box"></i>
+                      delivery
+                    </a>
+                  </Link>
                 </li>
                 <li className="nav__list-item">
                   <Link to={"/Location"}>
@@ -117,7 +119,7 @@ const Header = () => {
                 )}
                 {users?.email ? (
                   <div className="logout__father">
-                    <Link to={"/Signin"}>
+                    <Link to={"/SignIn"}>
                       <a
                         href="/"
                         className="logout btn-15 logout"

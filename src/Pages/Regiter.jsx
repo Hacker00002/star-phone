@@ -8,7 +8,6 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 const Register = () => {
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
-  const [phone, setNumber] = useState("");
   const [password, setPassword] = useState("");
   const [passwordRepeat, setPasswordRepeat] = useState("");
   const { googleSignIn, user } = UserAuth();
@@ -24,7 +23,7 @@ const Register = () => {
 
   useEffect(() => {
     if (user != null) {
-      navigate("/Regiter");
+      navigate("/Register");
     }
   }, [user]);
 
@@ -64,16 +63,6 @@ const Register = () => {
               id="register__input"
               type="text"
               placeholder="Enter your username"
-            />
-          </div>
-          <div className="input__icons">
-            <i class="fa-solid fa-phone-volume"></i>
-            <input
-              onChange={(e) => setNumber(e.target.value)}
-              value={phone}
-              id="register__input"
-              type="tel"
-              placeholder="Enter your phone number"
             />
           </div>
           <div className="input__icons">

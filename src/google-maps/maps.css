@@ -1,0 +1,32 @@
+.maps {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.contact__us h2 {
+  margin-bottom: 25px;
+}
+
+.work {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+
+.work h3 {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.work h3 .fa-solids {
+  color: #008dff;
+  font-size: 25px;
+}
+
+.work span,
+a {
+  color: #000;
+}

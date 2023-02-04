@@ -51,3 +51,12 @@
   width: 50px;
   border-radius: 50%;
 }
+
+.maps__text {
+  margin-top: 25px;
+}
+
+.maps__text h2 {
+  color: #008dff;
+  font-size: 40px;
+}

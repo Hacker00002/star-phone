@@ -61,8 +61,7 @@ h1 img {
 
 .div {
   display: flex;
-  justify-content: space-between;
-  gap: 20px;
+  gap: 10px;
 }
 
 .post {
@@ -145,4 +144,13 @@ h1 img {
 }
 .btn-152:active {
   top: 2px;
+}
+
+.card {
+  padding-top: 20px;
+  padding-bottom: 50px;
+  padding-left: 70px;
+  height: 550px;
+  overflow: scroll;
+  border-radius: 15px;
 }

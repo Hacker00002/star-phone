@@ -1,0 +1,104 @@
+.img__bg {
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0 0 13px 15px rgba(0, 0, 0, 0.047);
+  width: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  border-radius: 25px;
+  padding: 10px;
+}
+
+.img__bg .fa-regular {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+}
+
+.img__bg img {
+  width: 350px;
+}
+
+.singl__img {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.text__product h3 {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.price__product p {
+  text-decoration: line-through;
+  font-size: 16px;
+  color: orange;
+  margin-bottom: 10px;
+}
+
+.price__product h4 {
+  font-size: 25px;
+  margin-bottom: 10px;
+  margin-bottom: 20px;
+  color: #008dff;
+}
+
+.star__product .fa-solid {
+  color: gray;
+  font-size: 20px;
+}
+
+.star__product {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 35px;
+}
+
+.brand h3 {
+  color: #008dff;
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.brand h3 span {
+  color: #000;
+  font-size: 16px;
+}
+
+.star__product p {
+  font-size: 20px;
+  color: #008dff;
+}
+
+.product__add h4 {
+  color: #008dff;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.product__add h4 span {
+  color: green;
+  font-size: 16px;
+}
+
+.btn__product {
+  width: 250px;
+}
+
+.addButton {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+}

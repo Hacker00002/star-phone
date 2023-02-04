@@ -1,0 +1,26 @@
+#formOTP {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+#OTP {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.tel {
+  position: relative;
+}
+
+.tel .fa-solid {
+  position: absolute;
+  font-size: 22px;
+  top: 15px;
+  left: 10px;
+}

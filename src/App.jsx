@@ -8,6 +8,10 @@ import Register from "./Pages/Regiter";
 import Users from "./users/User";
 import SignIn from "./Pages/Signin";
 import Location from "./Pages/location/Location";
+import SingPage from "./Components/SinglPage/Singl";
+import DeliveryPage from "./Components/Delivery/Delivery";
+import LogoSlider from "./Components/Logo/Logo";
+import FooterPage from "./Components/Footer/Footer";
 
 function App() {
   return (
@@ -21,7 +25,11 @@ function App() {
           <Route path="/User" element={<Users />} />
           <Route path="/Signin" element={<SignIn />} />
           <Route path="/Location" element={<Location />} />
+          <Route path="/Singl" element={<SingPage />} />
+          <Route path="/Delivery" element={<DeliveryPage />} />
         </Routes>
+        <LogoSlider />
+        <FooterPage />
       </AuthContextProvider>
     </div>
   );
