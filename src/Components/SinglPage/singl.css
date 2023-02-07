@@ -11,6 +11,10 @@
   padding: 10px;
 }
 
+.singlPage {
+  padding-top: 175px;
+}
+
 .img__bg .fa-regular {
   display: flex;
   align-items: center;

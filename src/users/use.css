@@ -9,6 +9,7 @@
 .user__page {
   display: flex;
   gap: 50px;
+  padding-top: 175px;
 }
 
 .users h2 {
