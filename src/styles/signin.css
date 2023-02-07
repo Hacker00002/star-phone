@@ -9,3 +9,7 @@
   display: flex;
   gap: 135px;
 }
+
+.all__father-sign {
+  padding-top: 175px;
+}

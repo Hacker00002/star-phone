@@ -13,15 +13,30 @@ import {
 } from "firebase/firestore";
 
 const Admin = () => {
+  const [user, setUser] = useState([]);
+  const userCollectionRef = collection(db, "users");
+  // admin
   const [imageLink, setImageLink] = useState("");
   const [nameProduct, setNameProduct] = useState("");
   const [titleProduct, setTitleProduct] = useState("");
   const [discountProduct, setDiscountProduct] = useState("");
   const [priceProduct, setPriceProduct] = useState("");
   const [priceOldProduct, setPriceOldProduct] = useState("");
-  const [user, setUser] = useState([]);
-  const userCollectionRef = collection(db, "users");
-
+  const [description, setDescription] = useState("");
+  const [FUNCTIONS1, setFUNCTIONS1] = useState("");
+  const [FUNCTIONS2, setFUNCTIONS2] = useState("");
+  const [FUNCTIONS3, setFUNCTIONS3] = useState("");
+  const [FUNCTIONS4, setFUNCTIONS4] = useState("");
+  const [FUNCTIONS5, setFUNCTIONS5] = useState("");
+  const [FUNCTIONS6, setFUNCTIONS6] = useState("");
+  const [FUNCTIONS7, setFUNCTIONS7] = useState("");
+  const [FUNCTIONS8, setFUNCTIONS8] = useState("");
+  const [FUNCTIONS9, setFUNCTIONS9] = useState("");
+  const [FUNCTIONS10, setFUNCTIONS10] = useState("");
+  const [FUNCTIONS11, setFUNCTIONS11] = useState("");
+  const [FUNCTIONS12, setFUNCTIONS12] = useState("");
+  const [FUNCTIONS13, setFUNCTIONS13] = useState("");
+  // message
   const notify = () => {
     toast.success("Product added successfully!", {
       position: "top-right",
@@ -69,7 +84,8 @@ const Admin = () => {
       titleProduct === "" ||
       discountProduct === "" ||
       priceProduct === "" ||
-      priceOldProduct === ""
+      priceOldProduct === "" ||
+      description === ""
     ) {
       notifyMessage();
       return;
@@ -81,6 +97,20 @@ const Admin = () => {
       discount: discountProduct,
       price: priceProduct,
       priceDel: priceOldProduct,
+      description: description,
+      function1: FUNCTIONS1,
+      function2: FUNCTIONS2,
+      function3: FUNCTIONS3,
+      function4: FUNCTIONS4,
+      function5: FUNCTIONS5,
+      function6: FUNCTIONS6,
+      function7: FUNCTIONS7,
+      function8: FUNCTIONS8,
+      function9: FUNCTIONS9,
+      function10: FUNCTIONS10,
+      function11: FUNCTIONS11,
+      function12: FUNCTIONS12,
+      function13: FUNCTIONS13,
     });
     notify();
   };
@@ -127,6 +157,14 @@ const Admin = () => {
                 />
               </div>
               <div className="link">
+                <i class="fa-solid fa-file-signature"></i>
+                <input
+                  onChange={(evt) => setDescription(evt.target.value)}
+                  type="text"
+                  placeholder="Enter the product description"
+                />
+              </div>
+              <div className="link">
                 <i class="fa-solid fa-signature"></i>
                 <input
                   onChange={(evt) => setTitleProduct(evt.target.value)}
@@ -156,6 +194,111 @@ const Admin = () => {
                   onChange={(evt) => setPriceOldProduct(evt.target.value)}
                   type="text"
                   placeholder="Enter the old price of the product"
+                />
+              </div>
+              <h1>Characteristics</h1>
+              <div className="link">
+                <i class="fa-solid">1</i>
+                <input
+                  onChange={(evt) => setFUNCTIONS1(evt.target.value)}
+                  type="text"
+                  placeholder="Enter the SPECIFICATIONS AND FUNCTIONS"
+                />
+              </div>
+              <div className="link">
+                <i class="fa-solid">2</i>
+                <input
+                  onChange={(evt) => setFUNCTIONS2(evt.target.value)}
+                  type="text"
+                  placeholder="Enter the SPECIFICATIONS AND FUNCTIONS"
+                />
+              </div>
+              <div className="link">
+                <i class="fa-solid">3</i>
+                <input
+                  onChange={(evt) => setFUNCTIONS3(evt.target.value)}
+                  type="text"
+                  placeholder="Enter the SPECIFICATIONS AND FUNCTIONS"
+                />
+              </div>
+              <div className="link">
+                <i class="fa-solid">4</i>
+                <input
+                  onChange={(evt) => setFUNCTIONS4(evt.target.value)}
+                  type="text"
+                  placeholder="Enter the SPECIFICATIONS AND FUNCTIONS"
+                />
+              </div>
+              <div className="link">
+                <i class="fa-solid">5</i>
+                <input
+                  onChange={(evt) => setFUNCTIONS5(evt.target.value)}
+                  type="text"
+                  placeholder="Enter the SPECIFICATIONS AND FUNCTIONS"
+                />
+              </div>
+              <div className="link">
+                <i class="fa-solid">6</i>
+                <input
+                  onChange={(evt) => setFUNCTIONS6(evt.target.value)}
+                  type="text"
+                  placeholder="Enter the SPECIFICATIONS AND FUNCTIONS"
+                />
+              </div>
+              <div className="link">
+                <i class="fa-solid">7</i>
+                <input
+                  onChange={(evt) => setFUNCTIONS7(evt.target.value)}
+                  type="text"
+                  placeholder="Enter the SPECIFICATIONS AND FUNCTIONS"
+                />
+              </div>
+              <div className="link">
+                <i class="fa-solid">8</i>
+                <input
+                  onChange={(evt) => setFUNCTIONS8(evt.target.value)}
+                  type="text"
+                  placeholder="Enter the SPECIFICATIONS AND FUNCTIONS"
+                />
+              </div>
+              <div className="link">
+                <i class="fa-solid">9</i>
+                <input
+                  onChange={(evt) => setFUNCTIONS9(evt.target.value)}
+                  type="text"
+                  placeholder="Enter the SPECIFICATIONS AND FUNCTIONS"
+                />
+              </div>
+              <div className="link">
+                <i class="fa-solid">10</i>
+                <input
+                  onChange={(evt) => setFUNCTIONS10(evt.target.value)}
+                  type="text"
+                  placeholder="Enter the SPECIFICATIONS AND FUNCTIONS"
+                />
+              </div>
+              <div className="link">
+                <i class="fa-solid">11</i>
+                <input
+                  onChange={(evt) => setFUNCTIONS11(evt.target.value)}
+                  type="text"
+                  placeholder="Enter the SPECIFICATIONS AND FUNCTIONS"
+                />
+              </div>
+              <div className="link">
+                <i class="fa-solid">12</i>
+                <input
+                  onChange={(evt) => setFUNCTIONS12(evt.target.value)}
+                  type="text"
+                  placeholder="Enter the SPECIFICATIONS AND FUNCTIONS"
+                />
+              </div>
+              <div className="link">
+                <i class="fa-solid">13</i>
+                <input
+                  onChange={(evt) => setFUNCTIONS13(evt.target.value)}
+                  type="text"
+                  placeholder="Enter the SPECIFICATIONS AND FUNCTIONS"
                 />
               </div>
               <div className="btn">

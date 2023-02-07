@@ -8,6 +8,10 @@
   box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.04);
 }
 
+.all_fathers-contact {
+  padding-top: 175px;
+}
+
 #contact {
   display: flex;
   flex-direction: column;

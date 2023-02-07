@@ -28,12 +28,6 @@ export default () => {
               alt=""
             />
           </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src="https://assets.asaxiy.uz/uploads/banner/desktop/63cadd05cd258.jpeg.webp"
-              alt=""
-            />
-          </SwiperSlide>
         </Swiper>
       </div>
     </div>

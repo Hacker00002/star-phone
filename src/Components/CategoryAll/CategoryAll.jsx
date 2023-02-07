@@ -1,60 +1,75 @@
 import "./categoryAll.css";
-import post1 from "../../assets/postImg/post1.jpg";
-import post2 from "../../assets/postImg/post2.jpg";
-import post3 from "../../assets/postImg/post3.jpg";
-import post4 from "../../assets/postImg/post4.jpg";
-import post5 from "../../assets/postImg/post5.jpg";
-import post6 from "../../assets/postImg/post6.jpg";
 
 const CategoryAll = () => {
   return (
     <div className="container">
       <div className="img__father">
         <a href="#" className="post__img">
-          <h2>Phones</h2>
-
           <div className="containers">
-            <img src={post1} alt="" />
+            <img
+              src="https://nout.uz/wp-content/uploads/2022/05/samsung-2.jpg"
+              alt=""
+            />
           </div>
         </a>
         <a href="#" className="post__img">
-          <h2>Accessories</h2>
-
           <div className="containers">
-            <img src={post2} alt="" />
+            <img
+              src="https://nout.uz/wp-content/uploads/2022/05/dell.jpg"
+              alt=""
+            />
           </div>
         </a>
         <a href="#" className="post__img">
-          <h2>Keyboards and mouses</h2>
-
           <div className="containers">
-            <img src={post3} alt="" />
+            <img
+              src="https://nout.uz/wp-content/uploads/2022/05/razer-1.jpg"
+              alt=""
+            />
           </div>
         </a>
         <a href="#" className="post__img">
-          <h2>TWs</h2>
-
           <div className="containers">
-            <img src={post4} alt="" />
+            <img
+              src="https://nout.uz/wp-content/uploads/2022/05/microsft.jpg"
+              alt=""
+            />
           </div>
         </a>
         <a href="#" className="post__img">
-          <h2>Phones and gadgets</h2>
-
           <div className="containers">
-            <img src={post5} alt="" />
+            <img
+              src="https://nout.uz/wp-content/uploads/2022/05/apple-2.jpg"
+              alt=""
+            />
           </div>
         </a>
         <a href="#" className="post__img">
-          <h2>New products</h2>
-
           <div className="containers">
-            <img src={post6} alt="" />
+            <img
+              src="https://nout.uz/wp-content/uploads/2022/05/acer-1.jpg"
+              alt=""
+            />
+          </div>
+        </a>
+        <a href="#" className="post__img">
+          <div className="containers">
+            <img
+              src="https://nout.uz/wp-content/uploads/2022/05/hx_01-%E2%80%94-1970-x-500.jpg"
+              alt=""
+            />
+          </div>
+        </a>
+        <a href="#" className="post__img">
+          <div className="containers">
+            <img
+              src="https://nout.uz/wp-content/uploads/2022/06/envy.jpg"
+              alt=""
+            />
           </div>
         </a>
       </div>
     </div>
   );
 };
-
 export default CategoryAll;

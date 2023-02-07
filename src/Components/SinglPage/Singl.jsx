@@ -74,6 +74,52 @@ const SingPage = () => {
                 </div>
               </div>
             </div>
+            <div className="SPECIFICATIONS">
+              <div className="text__functions">
+                <h2>Characteristics</h2>
+              </div>
+              <div className="functions__products">
+                <div className="functions__product-one">
+                  <p>{elem.function1}</p>
+                </div>
+                <div className="functions__product-one">
+                  <p>{elem.function2}</p>
+                </div>
+                <div className="functions__product-one">
+                  <p>{elem.function3}</p>
+                </div>
+                <div className="functions__product-one">
+                  <p>{elem.function4}</p>
+                </div>
+                <div className="functions__product-one">
+                  <p>{elem.function5}</p>
+                </div>
+                <div className="functions__product-one">
+                  <p>{elem.function6}</p>
+                </div>
+                <div className="functions__product-one">
+                  <p>{elem.function7}</p>
+                </div>
+                <div className="functions__product-one">
+                  <p>{elem.function8}</p>
+                </div>
+                <div className="functions__product-one">
+                  <p>{elem.function9}</p>
+                </div>
+                <div className="functions__product-one">
+                  <p>{elem.function10}</p>
+                </div>
+                <div className="functions__product-one">
+                  <p>{elem.function11}</p>
+                </div>
+                <div className="functions__product-one">
+                  <p>{elem.function12}</p>
+                </div>
+                <div className="functions__product-one">
+                  <p>{elem.function13}</p>
+                </div>
+              </div>
+            </div>
           </div>
         );
       })}

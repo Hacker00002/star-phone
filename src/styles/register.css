@@ -5,6 +5,10 @@
   gap: 25px;
 }
 
+.register__form {
+  padding-top: 175px;
+}
+
 .register__form h1 {
   color: #000;
   text-align: center;

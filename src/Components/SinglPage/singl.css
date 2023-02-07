@@ -102,3 +102,32 @@
   padding-top: 13px;
   padding-bottom: 13px;
 }
+
+.text__functions h2 {
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+.SPECIFICATIONS {
+  border-radius: 20px;
+  box-shadow: 0 0 15px 13px #00000016;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.functions__products {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.functions__product-one {
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.functions__product-one p {
+  color: #00000091;
+  font-size: 17px;
+}
