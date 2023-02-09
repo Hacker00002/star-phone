@@ -16,7 +16,7 @@
 .delivery {
   width: 500px;
   border-radius: 50%;
-  border: 5px solid #008dff;
+  border: 5px solid #162e68;
 }
 
 .delivery__text {
@@ -37,7 +37,7 @@
 }
 
 .text__services .fa-solid {
-  color: #008dff;
+  color: #162e68;
   font-size: 30px;
 }
 
@@ -46,6 +46,6 @@
 }
 
 .delivery__text h2 {
-  color: #008dff;
+  color: #162e68;
   font-size: 35px;
 }

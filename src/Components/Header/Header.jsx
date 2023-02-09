@@ -1,15 +1,20 @@
 import "./header.css";
-import logo from "../../assets/img/asaxiy-logo.svg";
+import logo from "../../assets/logo/Cellus_org.svg";
 import register from "../../assets/img/icons8-writer-male-96 (1).png";
 import Category from "../Category/Category";
+import Translation from "../../language/language.json";
+import { languageContext } from "../../language/languageContext";
 import { UserAuth } from "../../account/google";
 import { onAuthStateChanged } from "firebase/auth";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { auth } from "../../Pages/register";
 import { Link } from "react-router-dom";
 
 const Header = () => {
+  const { lang, setLanguage } = useContext(languageContext);
+
   const { user, logOut } = UserAuth();
+  const [users, setUsers] = useState(null);
   const handleSignOut = async () => {
     try {
       await logOut();
@@ -18,7 +23,17 @@ const Header = () => {
     }
   };
 
-  const [users, setUsers] = useState(null);
+  const [content, setContent] = useState({});
+
+  useEffect(() => {
+    if (lang == "English") {
+      setContent(Translation.English);
+    } else if (lang == "Russian") {
+      setContent(Translation.Russian);
+    } else if (lang == "Uzbek") {
+      setContent(Translation.Uzbek);
+    }
+  });
 
   useEffect(() => {
     const listen = onAuthStateChanged(auth, (user) => {
@@ -35,20 +50,21 @@ const Header = () => {
 
   return (
     <div className="headerFather">
+      <div className="google-element"></div>
       <header className="header">
         <div className="container">
           <div className="header__father">
             <div className="logoIcon">
               <Link to={"/"}>
                 <a href="/" className="logo__svg">
-                  <img src={logo} alt="" />
+                  <img width={135} src={logo} alt="" />
                 </a>
               </Link>
               <div className="search">
                 <i class="fa-solid icon__search fa-magnifying-glass"></i>
                 <input
                   type="search"
-                  placeholder="Search..."
+                  placeholder={content?.Header?.Search}
                   className="searchInput"
                 />
               </div>
@@ -58,14 +74,14 @@ const Header = () => {
                 <li className="nav__list-item">
                   <a href="#" className="nav__link">
                     <i class="fa-regular icons fa-credit-card"></i>
-                    payment
+                    {content?.Settings?.Payments}
                   </a>
                 </li>
                 <li className="nav__list-item">
                   <Link to={"/Delivery"}>
                     <a href="/" className="nav__link">
                       <i class="fa-solid icons fa-truck-ramp-box"></i>
-                      delivery
+                      {content?.Settings?.Delivery}
                     </a>
                   </Link>
                 </li>
@@ -73,26 +89,36 @@ const Header = () => {
                   <Link to={"/Location"}>
                     <a href="/" className="nav__link">
                       <i class="fa-solid icons fa-map-location-dot"></i>
-                      address
+                      {content?.Settings?.Address}
                     </a>
                   </Link>
                 </li>
                 <li className="nav__list-item">
                   <a href="#" className="nav__link">
                     <i class="fa-solid icons fa-cart-shopping"></i>
-                    basket
+                    {content?.Settings?.Shop}
                   </a>
                 </li>
                 <li className="nav__list-item">
                   <a href="#" className="nav__link">
                     <i class="fa-regular icons fa-heart"></i>
-                    Favorites
+                    {content?.Settings?.Loves}
                   </a>
                 </li>
                 <li className="nav__list-item">
                   <a href="#" className="nav__link">
                     <i class="fa-solid icons fa-globe"></i>
-                    language
+                    <select
+                      value={lang}
+                      onChange={(evt) => {
+                        setLanguage(evt.target.value);
+                      }}
+                    >
+                      <option>language</option>
+                      <option>Russian</option>
+                      <option>English</option>
+                      <option>Uzbek</option>
+                    </select>
                   </a>
                 </li>
 

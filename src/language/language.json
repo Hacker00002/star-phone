@@ -1,0 +1,65 @@
+{
+  "Russian": {
+    "Header": {
+      "Search": "Поиск...",
+      "News": "Новости",
+      "Products": "Новые продукты",
+      "Price": "Скидки",
+      "Phones": "Телефоны и гаджеты",
+      "Accessories": "Аксессуары",
+      "Keyboards": "Клавиатуры и мыши",
+      "TVs": "телевизоры"
+    },
+    "Settings": {
+      "Payments": "оплата",
+      "Delivery": "доставка",
+      "Address": "адрес",
+      "Shop": "корзина",
+      "Loves": "Избранное",
+      "Translate": "язык",
+      "Search": "Поиск"
+    }
+  },
+  "Uzbek": {
+    "Header": {
+      "Search": "Izlash...",
+      "News": "Yangiliklar",
+      "Products": "Yangi mahsulotlar",
+      "Price": "Chegirmalar",
+      "Phones": "Telefonlar va gadjetlar",
+      "Accessories": "Aksessuarlar",
+      "Keyboards": "Klaviatura va sichqoncha",
+      "TVs": "Televizorlar"
+    },
+    "Settings": {
+      "Payments": "To'lov",
+      "Delivery": "Yetkazib berish",
+      "Address": "Manzil",
+      "Shop": "Savat",
+      "Loves": "Sevimlilar",
+      "Translate": "Til",
+      "Search": "Qidirmoq"
+    }
+  },
+  "English": {
+    "Header": {
+      "Search": "Search...",
+      "News": "News",
+      "Products": "New products",
+      "Price": "Discounts",
+      "Phones": "Phones and gadgets",
+      "Accessories": "Accessories",
+      "Keyboards": "Keyboards and mouses",
+      "TVs": "TVs"
+    },
+    "Settings": {
+      "Payments": "Payment",
+      "Delivery": "Delivery",
+      "Address": "Address",
+      "Shop": "Basket",
+      "Loves": "Favorites",
+      "Translate": "Language",
+      "Search": "Search..."
+    }
+  }
+}

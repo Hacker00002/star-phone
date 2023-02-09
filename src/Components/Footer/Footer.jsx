@@ -123,7 +123,7 @@ const FooterPage = () => {
               <li className="footer__list-item">
                 <a href="/" className="footer__link">
                   <i class="fa-solid fa-envelope"></i>
-                  <span>5</span> info@altajr.uz
+                  <span>5</span> info@cellus.uz
                 </a>
               </li>
               <li className="footer__list-item">
@@ -137,7 +137,7 @@ const FooterPage = () => {
         </div>
         <p className="text__company">
           <p>2022-{date}</p>
-          Online store <strong>Altajr.uz</strong> household appliances and
+          Online store <strong>Cellus.uz</strong> household appliances and
           others. Product delivery is carried out in all regions. All rights
           reserved.
         </p>

@@ -1,16 +1,37 @@
-import { Fragment } from "react";
+import { Fragment, useContext } from "react";
 import { useEffect, useState } from "react";
 import { db } from "../../firebase-config";
 import { collection, getDocs } from "firebase/firestore";
 import Loader from "../../Loader/Loader";
 import "./cards.css";
 import { Link } from "react-router-dom";
+import Translation from "../../language/language.json";
+import { languageContext } from "../../language/languageContext";
 
 const Cards = () => {
+  const [content, setContent] = useState({});
+  const { lang } = useContext(languageContext);
+
+  useEffect(() => {
+    if (lang == "English") {
+      setContent(Translation.English);
+    } else if (lang == "Russian") {
+      setContent(Translation.Russian);
+    } else if (lang == "Uzbek") {
+      setContent(Translation.Uzbek);
+    }
+  });
   const [loader, setLoader] = useState(false);
   const [user, setUser] = useState([]);
   const userCollectionRef = collection(db, "users");
-
+  useEffect(() => {
+    fetch(userCollectionRef)
+      .then((res) => res.json())
+      .then((data) => console.log(data))
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
   useEffect(() => {
     setLoader(true);
     const getUser = async () => {
@@ -25,19 +46,14 @@ const Cards = () => {
     return <Loader />;
   }
 
-  const idElem = (id) => {
-    console.log(id);
-  };
-
   return (
     <Fragment>
       <div className="container">
         <div className="cards__father">
           <div className="cards">
             {user.map((elem) => {
-              console.log(elem.id);
               return (
-                <div className="discount">
+                <div key={elem.id} className="discount">
                   <div className="discount__like">
                     <div className="disc">
                       <p>{elem.discount}</p>
@@ -66,12 +82,7 @@ const Cards = () => {
                   </div>
                   <div className="btn">
                     <Link to={"/Singl"}>
-                      <a
-                        href="/"
-                        // data-id={elem.id}
-                        onClick={() => idElem(elem.id)}
-                        className="custom-btn btn-15 button__add"
-                      >
+                      <a href="/" className="custom-btn btn-15 button__add">
                         Read more
                       </a>
                     </Link>

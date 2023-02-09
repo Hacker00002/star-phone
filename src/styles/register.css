@@ -101,7 +101,7 @@
 }
 
 .btn__signUp {
-  background: #008dff;
+  background: #162e68;
   border: none;
   z-index: 1;
 }
@@ -114,7 +114,7 @@
   top: 0;
   right: 0;
   z-index: -1;
-  background-color: #5db6ff;
+  background-color: #4d75d1;
   border-radius: 15px;
   transition: all 0.3s ease;
 }

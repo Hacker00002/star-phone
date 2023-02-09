@@ -1,10 +1,33 @@
 import "./location.css";
 import { ToastContainer, toast } from "react-toastify";
+import { useRef, useState } from "react";
 import "react-toastify/dist/ReactToastify.css";
 import operator from "../../assets/img/icons8-operator-100.png";
 import Maps from "../../google-maps/Maps";
 
 const Location = () => {
+  const [email, setEmail] = useState("");
+  const [tel, setTel] = useState("");
+  const [userName, setUserName] = useState("");
+  const emailText = useRef(null);
+  const telText = useRef(null);
+
+  const handleEmail = (e) => {
+    let value = e.target.value;
+    setEmail(value);
+    if (value.length == 40) {
+      emailText.current.focus();
+    }
+  };
+
+  const handlePhone = (e) => {
+    let value = e.target.value;
+    setTel(value);
+    if (value.length == 13) {
+      telText.current.focus();
+    }
+  };
+
   const notify = () => {
     toast.success("Product added successfully!", {
       position: "top-right",
@@ -42,6 +65,8 @@ const Location = () => {
               <div className="contacts">
                 <i class="fa-solid fa-envelope-open-text"></i>
                 <input
+                  onChange={handleEmail}
+                  value={email}
                   type="email"
                   name="email"
                   placeholder="Enter your email"
@@ -51,15 +76,19 @@ const Location = () => {
               <div className="contacts">
                 <i class="fa-solid fa-phone-volume"></i>
                 <input
+                  ref={emailText}
+                  onChange={handlePhone}
+                  value={tel}
                   type="tel"
                   name="tel"
-                  placeholder="Enter a phone number to contact you"
+                  placeholder="Phone number to contact you +99897 400 00 00"
                   required
                 />
               </div>
               <div className="contacts">
                 <i class="fa-brands fa-solid fa-telegram"></i>
                 <input
+                  ref={telText}
                   type="text"
                   name="text"
                   placeholder="What is your Telegram username?"

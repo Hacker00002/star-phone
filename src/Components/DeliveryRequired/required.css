@@ -4,12 +4,12 @@
 
 .required__father h1 {
   text-align: center;
-  color: #008dff;
+  color: #162e68;
   margin-bottom: 50px;
 }
 
 .delivery__payments h3 {
-  color: #008dff;
+  color: #162e68;
   font-size: 25px;
   margin-bottom: 5px;
 }
@@ -22,13 +22,13 @@
 
 .delivery__text-one h2 {
   font-size: 25px;
-  color: #008dff;
+  color: #162e68;
   margin-bottom: 10px;
 }
 
 .delivery__text-one span {
   font-size: 20px;
-  color: #008dff;
+  color: #162e68;
 }
 
 .delivery__requireds {

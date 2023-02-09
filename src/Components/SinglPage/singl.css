@@ -53,7 +53,7 @@
   font-size: 25px;
   margin-bottom: 10px;
   margin-bottom: 20px;
-  color: #008dff;
+  color: #162e68;
 }
 
 .star__product .fa-solid {
@@ -69,7 +69,7 @@
 }
 
 .brand h3 {
-  color: #008dff;
+  color: #162e68;
   font-size: 20px;
   margin-bottom: 25px;
 }
@@ -81,11 +81,11 @@
 
 .star__product p {
   font-size: 20px;
-  color: #008dff;
+  color: #162e68;
 }
 
 .product__add h4 {
-  color: #008dff;
+  color: #162e68;
   font-size: 20px;
   margin-bottom: 20px;
 }

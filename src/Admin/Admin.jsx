@@ -15,6 +15,7 @@ import {
 const Admin = () => {
   const [user, setUser] = useState([]);
   const userCollectionRef = collection(db, "users");
+  const [close, setClose] = useState(false);
   // admin
   const [imageLink, setImageLink] = useState("");
   const [nameProduct, setNameProduct] = useState("");
@@ -128,249 +129,325 @@ const Admin = () => {
     };
     getUser();
   }, []);
+
+  function closeItem() {
+    setClose(!close);
+  }
+
   return (
-    <div className="container">
-      <div className="div">
-        <div className="all">
-          <div className="admin__father">
-            <h1>
-              Hello Admin
-              <img src={admin} alt="" />
-            </h1>
-          </div>
-          <div className="forms">
-            <form onSubmit={createProducts} id="admin__form">
-              <div className="link">
-                <i class="fa-solid fa-link"></i>
-                <input
-                  onChange={(evt) => setImageLink(evt.target.value)}
-                  type="url"
-                  placeholder="Enter image link"
-                />
-              </div>
-              <div className="link">
-                <i class="fa-solid fa-file-signature"></i>
-                <input
-                  onChange={(evt) => setNameProduct(evt.target.value)}
-                  type="text"
-                  placeholder="Enter the name of the product"
-                />
-              </div>
-              <div className="link">
-                <i class="fa-solid fa-file-signature"></i>
-                <input
-                  onChange={(evt) => setDescription(evt.target.value)}
-                  type="text"
-                  placeholder="Enter the product description"
-                />
-              </div>
-              <div className="link">
-                <i class="fa-solid fa-signature"></i>
-                <input
-                  onChange={(evt) => setTitleProduct(evt.target.value)}
-                  type="text"
-                  placeholder="Enter the title of the product"
-                />
-              </div>
-              <div className="link">
-                <i class="fa-solid fa-tags"></i>
-                <input
-                  onChange={(evt) => setDiscountProduct(evt.target.value)}
-                  type="text"
-                  placeholder="Add a product discount"
-                />
-              </div>
-              <div className="link">
-                <i class="fa-solid fa-money-bill-1-wave"></i>
-                <input
-                  type="text"
-                  onChange={(evt) => setPriceProduct(evt.target.value)}
-                  placeholder="Enter the product price"
-                />
-              </div>
-              <div className="link">
-                <i class="fa-solid fa-barcode"></i>
-                <input
-                  onChange={(evt) => setPriceOldProduct(evt.target.value)}
-                  type="text"
-                  placeholder="Enter the old price of the product"
-                />
-              </div>
-              <h1>Characteristics</h1>
-              <div className="link">
-                <i class="fa-solid">1</i>
-                <input
-                  onChange={(evt) => setFUNCTIONS1(evt.target.value)}
-                  type="text"
-                  placeholder="Enter the SPECIFICATIONS AND FUNCTIONS"
-                />
-              </div>
-              <div className="link">
-                <i class="fa-solid">2</i>
-                <input
-                  onChange={(evt) => setFUNCTIONS2(evt.target.value)}
-                  type="text"
-                  placeholder="Enter the SPECIFICATIONS AND FUNCTIONS"
-                />
-              </div>
-              <div className="link">
-                <i class="fa-solid">3</i>
-                <input
-                  onChange={(evt) => setFUNCTIONS3(evt.target.value)}
-                  type="text"
-                  placeholder="Enter the SPECIFICATIONS AND FUNCTIONS"
-                />
-              </div>
-              <div className="link">
-                <i class="fa-solid">4</i>
-                <input
-                  onChange={(evt) => setFUNCTIONS4(evt.target.value)}
-                  type="text"
-                  placeholder="Enter the SPECIFICATIONS AND FUNCTIONS"
-                />
-              </div>
-              <div className="link">
-                <i class="fa-solid">5</i>
-                <input
-                  onChange={(evt) => setFUNCTIONS5(evt.target.value)}
-                  type="text"
-                  placeholder="Enter the SPECIFICATIONS AND FUNCTIONS"
-                />
-              </div>
-              <div className="link">
-                <i class="fa-solid">6</i>
-                <input
-                  onChange={(evt) => setFUNCTIONS6(evt.target.value)}
-                  type="text"
-                  placeholder="Enter the SPECIFICATIONS AND FUNCTIONS"
-                />
-              </div>
-              <div className="link">
-                <i class="fa-solid">7</i>
-                <input
-                  onChange={(evt) => setFUNCTIONS7(evt.target.value)}
-                  type="text"
-                  placeholder="Enter the SPECIFICATIONS AND FUNCTIONS"
-                />
-              </div>
-              <div className="link">
-                <i class="fa-solid">8</i>
-                <input
-                  onChange={(evt) => setFUNCTIONS8(evt.target.value)}
-                  type="text"
-                  placeholder="Enter the SPECIFICATIONS AND FUNCTIONS"
-                />
-              </div>
-              <div className="link">
-                <i class="fa-solid">9</i>
-                <input
-                  onChange={(evt) => setFUNCTIONS9(evt.target.value)}
-                  type="text"
-                  placeholder="Enter the SPECIFICATIONS AND FUNCTIONS"
-                />
-              </div>
-              <div className="link">
-                <i class="fa-solid">10</i>
-                <input
-                  onChange={(evt) => setFUNCTIONS10(evt.target.value)}
-                  type="text"
-                  placeholder="Enter the SPECIFICATIONS AND FUNCTIONS"
-                />
-              </div>
-              <div className="link">
-                <i class="fa-solid">11</i>
-                <input
-                  onChange={(evt) => setFUNCTIONS11(evt.target.value)}
-                  type="text"
-                  placeholder="Enter the SPECIFICATIONS AND FUNCTIONS"
-                />
-              </div>
-              <div className="link">
-                <i class="fa-solid">12</i>
-                <input
-                  onChange={(evt) => setFUNCTIONS12(evt.target.value)}
-                  type="text"
-                  placeholder="Enter the SPECIFICATIONS AND FUNCTIONS"
-                />
-              </div>
-              <div className="link">
-                <i class="fa-solid">13</i>
-                <input
-                  onChange={(evt) => setFUNCTIONS13(evt.target.value)}
-                  type="text"
-                  placeholder="Enter the SPECIFICATIONS AND FUNCTIONS"
-                />
-              </div>
-              <div className="btn">
-                <button type="submit">Add product</button>
-              </div>
-              <ToastContainer
-                position="top-right"
-                autoClose={5000}
-                hideProgressBar={false}
-                newestOnTop={false}
-                closeOnClick
-                rtl={false}
-                pauseOnFocusLoss
-                draggable
-                pauseOnHover
-                theme="light"
-              />
-              {/* Same as */}
-              <ToastContainer />
-            </form>
-          </div>
-        </div>
-        <div className="cards__father">
-          <div className="cards card">
-            {user.map((elem) => {
-              return (
-                <div className="discount">
-                  <div className="discount__like">
-                    <div className="disc">
-                      <p>{elem.discount}</p>
-                    </div>
-                    <div className="like">
-                      <i class="fa-solid card__plus shop fa-cart-plus"></i>
-                      <i class="fa-regular card__plus fa-heart"></i>
-                    </div>
+    <div className="all__edit">
+      <div className="container">
+        <div className="div">
+          {close ? (
+            <div>
+              <div className="edit__bg"></div>
+              <div id="edit__father">
+                <form id="edits">
+                  <i onClick={closeItem} class="fa-solid fa-xmark"></i>
+                  <div className="edit__father">
+                    <i class="fa-regular fa-pen-to-square"></i>
+                    <input type="text" id="edit" placeholder="Edit the image" />
                   </div>
-                  <div className="card__img">
-                    <img src={elem.img} alt="" />
+                  <div className="edit__father">
+                    <i class="fa-regular fa-pen-to-square"></i>
+                    <input
+                      type="text"
+                      id="edit"
+                      placeholder="Edit the name product"
+                    />
                   </div>
-                  <div className="card__text">
-                    <p>{elem.model}</p>
+                  <div className="edit__father">
+                    <i class="fa-regular fa-pen-to-square"></i>
+                    <input
+                      type="text"
+                      id="edit"
+                      placeholder="Edit the product description"
+                    />
                   </div>
-                  <div className="star">
-                    <i class="fa-solid stars fa-star"></i>
-                    <i class="fa-solid stars fa-star"></i>
-                    <i class="fa-solid stars fa-star"></i>
-                    <i class="fa-solid stars fa-star"></i>
-                    <i class="fa-solid stars fa-star"></i>
+                  <div className="edit__father">
+                    <i class="fa-regular fa-pen-to-square"></i>
+                    <input
+                      type="text"
+                      id="edit"
+                      placeholder="Edit the title product"
+                    />
                   </div>
-                  <div className="price">
-                    <h6>{elem.priceDel} uzs</h6>
-                    <p>{elem.price} uzs</p>
+                  <div className="edit__father">
+                    <i class="fa-regular fa-pen-to-square"></i>
+                    <input
+                      type="text"
+                      id="edit"
+                      placeholder="Edit the product discount"
+                    />
                   </div>
-                  <div className="btn">
-                    <a href="#" className="custom-btn btn-15 button__add">
-                      Read more
-                    </a>
+                  <div className="edit__father">
+                    <i class="fa-regular fa-pen-to-square"></i>
+                    <input
+                      type="text"
+                      id="edit"
+                      placeholder="Edit the product price"
+                    />
                   </div>
-                  <div className="post">
-                    <button
-                      onClick={() => {
-                        deleteProducts(elem.id);
-                      }}
-                      className="custom-bts btn-153"
-                    >
-                      Delete
-                    </button>
-                    <button className="custom-bts btn-152">Edit</button>
+                  <div className="edit__father">
+                    <i class="fa-regular fa-pen-to-square"></i>
+                    <input
+                      type="text"
+                      id="edit"
+                      placeholder="Edit the product old price"
+                    />
                   </div>
+                </form>
+              </div>
+            </div>
+          ) : (
+            ""
+          )}
+          <div className="all">
+            <div className="admin__father">
+              <h1>
+                Hello Admin
+                <img src={admin} alt="" />
+              </h1>
+            </div>
+            <div className="forms">
+              <form onSubmit={createProducts} id="admin__form">
+                <div className="link">
+                  <i class="fa-solid fa-link"></i>
+                  <input
+                    onChange={(evt) => setImageLink(evt.target.value)}
+                    type="url"
+                    placeholder="Enter image link"
+                  />
                 </div>
-              );
-            })}
+                <div className="link">
+                  <i class="fa-solid fa-file-signature"></i>
+                  <input
+                    onChange={(evt) => setNameProduct(evt.target.value)}
+                    type="text"
+                    placeholder="Enter the name of the product"
+                  />
+                </div>
+                <div className="link">
+                  <i class="fa-solid fa-file-signature"></i>
+                  <input
+                    onChange={(evt) => setDescription(evt.target.value)}
+                    type="text"
+                    placeholder="Enter the product description"
+                  />
+                </div>
+                <div className="link">
+                  <i class="fa-solid fa-signature"></i>
+                  <input
+                    onChange={(evt) => setTitleProduct(evt.target.value)}
+                    type="text"
+                    placeholder="Enter the title of the product"
+                  />
+                </div>
+                <div className="link">
+                  <i class="fa-solid fa-tags"></i>
+                  <input
+                    onChange={(evt) => setDiscountProduct(evt.target.value)}
+                    type="text"
+                    placeholder="Add a product discount"
+                  />
+                </div>
+                <div className="link">
+                  <i class="fa-solid fa-money-bill-1-wave"></i>
+                  <input
+                    type="text"
+                    onChange={(evt) => setPriceProduct(evt.target.value)}
+                    placeholder="Enter the product price"
+                  />
+                </div>
+                <div className="link">
+                  <i class="fa-solid fa-barcode"></i>
+                  <input
+                    onChange={(evt) => setPriceOldProduct(evt.target.value)}
+                    type="text"
+                    placeholder="Enter the old price of the product"
+                  />
+                </div>
+                <h1>Characteristics</h1>
+                <div className="link">
+                  <i class="fa-solid">1</i>
+                  <input
+                    onChange={(evt) => setFUNCTIONS1(evt.target.value)}
+                    type="text"
+                    placeholder="Enter the SPECIFICATIONS AND FUNCTIONS"
+                  />
+                </div>
+                <div className="link">
+                  <i class="fa-solid">2</i>
+                  <input
+                    onChange={(evt) => setFUNCTIONS2(evt.target.value)}
+                    type="text"
+                    placeholder="Enter the SPECIFICATIONS AND FUNCTIONS"
+                  />
+                </div>
+                <div className="link">
+                  <i class="fa-solid">3</i>
+                  <input
+                    onChange={(evt) => setFUNCTIONS3(evt.target.value)}
+                    type="text"
+                    placeholder="Enter the SPECIFICATIONS AND FUNCTIONS"
+                  />
+                </div>
+                <div className="link">
+                  <i class="fa-solid">4</i>
+                  <input
+                    onChange={(evt) => setFUNCTIONS4(evt.target.value)}
+                    type="text"
+                    placeholder="Enter the SPECIFICATIONS AND FUNCTIONS"
+                  />
+                </div>
+                <div className="link">
+                  <i class="fa-solid">5</i>
+                  <input
+                    onChange={(evt) => setFUNCTIONS5(evt.target.value)}
+                    type="text"
+                    placeholder="Enter the SPECIFICATIONS AND FUNCTIONS"
+                  />
+                </div>
+                <div className="link">
+                  <i class="fa-solid">6</i>
+                  <input
+                    onChange={(evt) => setFUNCTIONS6(evt.target.value)}
+                    type="text"
+                    placeholder="Enter the SPECIFICATIONS AND FUNCTIONS"
+                  />
+                </div>
+                <div className="link">
+                  <i class="fa-solid">7</i>
+                  <input
+                    onChange={(evt) => setFUNCTIONS7(evt.target.value)}
+                    type="text"
+                    placeholder="Enter the SPECIFICATIONS AND FUNCTIONS"
+                  />
+                </div>
+                <div className="link">
+                  <i class="fa-solid">8</i>
+                  <input
+                    onChange={(evt) => setFUNCTIONS8(evt.target.value)}
+                    type="text"
+                    placeholder="Enter the SPECIFICATIONS AND FUNCTIONS"
+                  />
+                </div>
+                <div className="link">
+                  <i class="fa-solid">9</i>
+                  <input
+                    onChange={(evt) => setFUNCTIONS9(evt.target.value)}
+                    type="text"
+                    placeholder="Enter the SPECIFICATIONS AND FUNCTIONS"
+                  />
+                </div>
+                <div className="link">
+                  <i class="fa-solid">10</i>
+                  <input
+                    onChange={(evt) => setFUNCTIONS10(evt.target.value)}
+                    type="text"
+                    placeholder="Enter the SPECIFICATIONS AND FUNCTIONS"
+                  />
+                </div>
+                <div className="link">
+                  <i class="fa-solid">11</i>
+                  <input
+                    onChange={(evt) => setFUNCTIONS11(evt.target.value)}
+                    type="text"
+                    placeholder="Enter the SPECIFICATIONS AND FUNCTIONS"
+                  />
+                </div>
+                <div className="link">
+                  <i class="fa-solid">12</i>
+                  <input
+                    onChange={(evt) => setFUNCTIONS12(evt.target.value)}
+                    type="text"
+                    placeholder="Enter the SPECIFICATIONS AND FUNCTIONS"
+                  />
+                </div>
+                <div className="link">
+                  <i class="fa-solid">13</i>
+                  <input
+                    onChange={(evt) => setFUNCTIONS13(evt.target.value)}
+                    type="text"
+                    placeholder="Enter the SPECIFICATIONS AND FUNCTIONS"
+                  />
+                </div>
+                <div className="btn">
+                  <button type="submit">Add product</button>
+                </div>
+                <ToastContainer
+                  position="top-right"
+                  autoClose={5000}
+                  hideProgressBar={false}
+                  newestOnTop={false}
+                  closeOnClick
+                  rtl={false}
+                  pauseOnFocusLoss
+                  draggable
+                  pauseOnHover
+                  theme="light"
+                />
+                {/* Same as */}
+                <ToastContainer />
+              </form>
+            </div>
+          </div>
+          <div className="cards__father">
+            <div className="cards card">
+              {user.map((elem) => {
+                return (
+                  <div className="discount">
+                    <div className="discount__like">
+                      <div className="disc">
+                        <p>{elem.discount}</p>
+                      </div>
+                      <div className="like">
+                        <i class="fa-solid card__plus shop fa-cart-plus"></i>
+                        <i class="fa-regular card__plus fa-heart"></i>
+                      </div>
+                    </div>
+                    <div className="card__img">
+                      <img src={elem.img} alt="" />
+                    </div>
+                    <div className="card__text">
+                      <p>{elem.model}</p>
+                    </div>
+                    <div className="star">
+                      <i class="fa-solid stars fa-star"></i>
+                      <i class="fa-solid stars fa-star"></i>
+                      <i class="fa-solid stars fa-star"></i>
+                      <i class="fa-solid stars fa-star"></i>
+                      <i class="fa-solid stars fa-star"></i>
+                    </div>
+                    <div className="price">
+                      <h6>{elem.priceDel} uzs</h6>
+                      <p>{elem.price} uzs</p>
+                    </div>
+                    <div className="btn">
+                      <a href="#" className="custom-btn btn-15 button__add">
+                        Read more
+                      </a>
+                    </div>
+                    <div className="post">
+                      <button
+                        onClick={() => {
+                          deleteProducts(elem.id);
+                        }}
+                        className="custom-bts btn-153"
+                      >
+                        Delete
+                      </button>
+                      <button
+                        onClick={closeItem}
+                        className="custom-bts btn-152"
+                      >
+                        Edit
+                      </button>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
