@@ -33,17 +33,17 @@ const CategoryAll = () => {
           </a>
           <a href="#">
             <img
-              src="https://assets.asaxiy.uz/product/main_image/desktop//6325aa1ecd141.png.webp"
-              alt=""
-            />
-            <h3>{content?.LogoBrands_name?.Brand2}</h3>
-          </a>
-          <a href="#">
-            <img
               src="https://assets.asaxiy.uz/product/main_image/desktop//63d22ceb24043.png.webp"
               alt=""
             />
             <h3>{content?.LogoBrands_name?.Brand3}</h3>
+          </a>
+          <a href="#">
+            <img
+              src="https://assets.asaxiy.uz/product/main_image/desktop//6325aa1ecd141.png.webp"
+              alt=""
+            />
+            <h3>{content?.LogoBrands_name?.Brand2}</h3>
           </a>
           <a href="#">
             <img
@@ -69,6 +69,13 @@ const CategoryAll = () => {
           <a href="#">
             <img src={logoBrand} alt="" />
             <h3>{content?.LogoBrands_name?.Brand8}</h3>
+          </a>
+          <a href="#">
+            <img
+              src="https://assets.asaxiy.uz/product/main_image/desktop//63df94d75f256.png.webp"
+              alt=""
+            />
+            <h3>{content?.LogoBrands_name?.Brand9}</h3>
           </a>
           <a href="#">
             <img
@@ -88,17 +95,17 @@ const CategoryAll = () => {
           </a>
           <a href="#">
             <img
-              src="https://assets.asaxiy.uz/product/main_image/desktop//6325aa1ecd141.png.webp"
-              alt=""
-            />
-            <h3>{content?.LogoBrands_name?.Brand2}</h3>
-          </a>
-          <a href="#">
-            <img
               src="https://assets.asaxiy.uz/product/main_image/desktop//63d22ceb24043.png.webp"
               alt=""
             />
             <h3>{content?.LogoBrands_name?.Brand3}</h3>
+          </a>
+          <a href="#">
+            <img
+              src="https://assets.asaxiy.uz/product/main_image/desktop//6325aa1ecd141.png.webp"
+              alt=""
+            />
+            <h3>{content?.LogoBrands_name?.Brand2}</h3>
           </a>
           <a href="#">
             <img
@@ -124,6 +131,13 @@ const CategoryAll = () => {
           <a href="#">
             <img src={logoBrand} alt="" />
             <h3>{content?.LogoBrands_name?.Brand8}</h3>
+          </a>
+          <a href="#">
+            <img
+              src="https://assets.asaxiy.uz/product/main_image/desktop//63df94d75f256.png.webp"
+              alt=""
+            />
+            <h3>{content?.LogoBrands_name?.Brand9}</h3>
           </a>
           <a href="#">
             <img
@@ -143,17 +157,17 @@ const CategoryAll = () => {
           </a>
           <a href="#">
             <img
-              src="https://assets.asaxiy.uz/product/main_image/desktop//6325aa1ecd141.png.webp"
-              alt=""
-            />
-            <h3>{content?.LogoBrands_name?.Brand2}</h3>
-          </a>
-          <a href="#">
-            <img
               src="https://assets.asaxiy.uz/product/main_image/desktop//63d22ceb24043.png.webp"
               alt=""
             />
             <h3>{content?.LogoBrands_name?.Brand3}</h3>
+          </a>
+          <a href="#">
+            <img
+              src="https://assets.asaxiy.uz/product/main_image/desktop//6325aa1ecd141.png.webp"
+              alt=""
+            />
+            <h3>{content?.LogoBrands_name?.Brand2}</h3>
           </a>
           <a href="#">
             <img
@@ -179,6 +193,13 @@ const CategoryAll = () => {
           <a href="#">
             <img src={logoBrand} alt="" />
             <h3>{content?.LogoBrands_name?.Brand8}</h3>
+          </a>
+          <a href="#">
+            <img
+              src="https://assets.asaxiy.uz/product/main_image/desktop//63df94d75f256.png.webp"
+              alt=""
+            />
+            <h3>{content?.LogoBrands_name?.Brand9}</h3>
           </a>
           <a href="#">
             <img

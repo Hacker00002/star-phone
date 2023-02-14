@@ -63,7 +63,8 @@
       "Brand5": "Samsung",
       "Brand6": "Ноутбуки",
       "Brand7": "Часы",
-      "Brand8": "Аксессуары"
+      "Brand8": "Аксессуары",
+      "Brand9": "Кнопочные телефоны"
     }
   },
 
@@ -131,7 +132,8 @@
       "Brand5": "Samsung",
       "Brand6": "Noutbuklar",
       "Brand7": "Soatlar",
-      "Brand8": "Aksessuarlar"
+      "Brand8": "Aksessuarlar",
+      "Brand9": "Knopkali telefonlar"
     }
   },
 
@@ -199,7 +201,8 @@
       "Brand5": "Samsung",
       "Brand6": "laptops",
       "Brand7": "Watchs",
-      "Brand8": "Accessories"
+      "Brand8": "Accessories",
+      "Brand9": "Push-button phones"
     }
   }
 }
