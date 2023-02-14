@@ -4,11 +4,13 @@ import characteristics from "../assets/logo/characteristics.png";
 import favorite from "../assets/logo/favorite.png";
 import promotion from "../assets/logo/promotion.png";
 import products from "../assets/logo/product.png";
+import "react-toastify/dist/ReactToastify.css";
 import top from "../assets/logo/top-three.png";
 import { useEffect, useState } from "react";
 import { db } from "../firebase-config";
+import { auth } from "./AdminPost";
+import { signInWithEmailAndPassword } from "firebase/auth";
 import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import {
   collection,
   getDocs,
@@ -16,6 +18,7 @@ import {
   deleteDoc,
   doc,
 } from "firebase/firestore";
+import { useNavigate } from "react-router-dom";
 
 const Admin = () => {
   const [user, setUser] = useState([]);
@@ -191,8 +194,63 @@ const Admin = () => {
     setClose(!close);
   }
 
+  const [email, setEmailAdmin] = useState("");
+  const [password, setAdminPassword] = useState("");
+  const [error, setError] = useState(false);
+  const Navigate = useNavigate();
+
+  const handleLoginTestAdmin = (e) => {
+    e.preventDefault();
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        const user = userCredential.user;
+        Navigate("/");
+      })
+      .catch((error) => {
+        setError(error);
+      });
+  };
+
   return (
     <div className="all__edit">
+      <div id="admin__fathers">
+        <div className="test__admin">
+          <div className="container">
+            <form onSubmit={handleLoginTestAdmin} id="admin__login">
+              <h3>
+                Complete the list to access the admin panel
+                <i class="fa-solid fa-user-tie"></i>
+              </h3>
+              <div className="admin__dashboard">
+                <i class="fa-solid fa-signature"></i>
+                <input type="text" placeholder="Enter username admin" />
+              </div>
+              <div className="admin__dashboard">
+                <i class="fa-solid fa-user-tie"></i>
+                <input
+                  onChange={(e) => setEmailAdmin(e.target.value)}
+                  type="email"
+                  placeholder="Enter email admin"
+                />
+              </div>
+              <div className="admin__dashboard">
+                <i class="fa-solid fa-lock"></i>
+                <input
+                  onChange={(e) => setAdminPassword(e.target.value)}
+                  type="password"
+                  placeholder="Enter password admin"
+                />
+              </div>
+              <div className="btn">
+                <button type="submit">Add product</button>
+              </div>
+              {error && (
+                <span>You have entered an incorrect email or password</span>
+              )}
+            </form>
+          </div>
+        </div>
+      </div>
       <div className="container">
         <div className="div">
           <div className="addTops">

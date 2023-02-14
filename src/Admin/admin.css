@@ -290,3 +290,58 @@ h1 img {
   top: 15px;
   left: 10px;
 }
+
+/* admin */
+.test__admin {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #162e68;
+  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#admin__fathers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#admin__login {
+  display: flex;
+  flex-direction: column;
+  width: 430px;
+  gap: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.admin__dashboard {
+  position: relative;
+}
+
+.admin__dashboard .fa-solid {
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  font-size: 20px;
+}
+
+.admin__dashboard input {
+  width: 430px;
+}
+
+#admin__login h3 {
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+}
+
+#admin__login span {
+  text-align: center;
+  color: red;
+}
