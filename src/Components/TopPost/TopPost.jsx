@@ -1,47 +1,32 @@
-import { languageContext } from "../../language/languageContext";
-import { collection, getDocs } from "firebase/firestore";
 import { Fragment, useContext } from "react";
 import { useEffect, useState } from "react";
 import { db } from "../../firebase-config";
+import { collection, getDocs } from "firebase/firestore";
 import { Link } from "react-router-dom";
-import Translation from "../../language/language.json";
 import ReactPaginate from "react-paginate";
-import Loader from "../../Loader/Loader";
-import "./cards.css";
-
-const Cards = () => {
-  const [loader, setLoader] = useState(false);
+// import Loader from "../../Loader/Loader";
+import "./topPost.css";
+const TopPost = () => {
+  //   const [loader, setLoader] = useState(false);
   const [user, setUser] = useState([]);
-  const userCollectionRef = collection(db, "users");
+  const userCollectionRefTwo = collection(db, "topProducts");
   const [pageNum, setPagNum] = useState(0);
   const usersPage = 15;
   const pageVisit = pageNum * usersPage;
-  const { lang, setLanguage } = useContext(languageContext);
-  const [content, setContent] = useState({});
 
   useEffect(() => {
-    if (lang == "English") {
-      setContent(Translation.English);
-    } else if (lang == "Russian") {
-      setContent(Translation.Russian);
-    } else if (lang == "Uzbek") {
-      setContent(Translation.Uzbek);
-    }
-  });
-
-  useEffect(() => {
-    setLoader(true);
+    // setLoader(true);
     const getUser = async () => {
-      const data = await getDocs(userCollectionRef);
+      const data = await getDocs(userCollectionRefTwo);
       setUser(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-      setLoader(false);
+      //   setLoader(false);
     };
     getUser();
   }, []);
 
-  if (loader) {
-    return <Loader />;
-  }
+  //   if (loader) {
+  //     return <Loader />;
+  //   }
 
   const pageCount = Math.ceil(user.length / usersPage);
   const changePage = ({ selected }) => {
@@ -55,7 +40,7 @@ const Cards = () => {
         <div key={elem.id} className="discount">
           <div className="discount__like">
             <div className="disc">
-              <p>{elem.discount}</p>
+              <p className="NEW">{elem.discount}</p>
             </div>
             <div className="like">
               <i class="fa-solid card__plus shop fa-cart-plus"></i>
@@ -82,7 +67,7 @@ const Cards = () => {
           <div className="btn">
             <Link to={"/Singl"}>
               <a href="/" className="custom-btn btn-15 button__add">
-                {content?.CardsDISCOUNT?.text2}
+                Read more
               </a>
             </Link>
           </div>
@@ -92,7 +77,7 @@ const Cards = () => {
   return (
     <Fragment>
       <div className="container">
-        <h2 className="newsPro">Новые продукты</h2>
+        <h2 className="topPs">Продукты, выбранные для вас</h2>
         <div className="cards__father">
           <div className="cards">
             {displayUsers}
@@ -114,4 +99,4 @@ const Cards = () => {
   );
 };
 
-export default Cards;
+export default TopPost;

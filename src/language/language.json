@@ -18,8 +18,55 @@
       "Loves": "Избранное",
       "Translate": "язык",
       "Search": "Поиск"
+    },
+    "Footer": {
+      "Market1": "Больше не ходить на рынок",
+      "Market2": "У нас конкурентоспособные цены и доставка на дом",
+
+      "Market3": "Быстрая доставка",
+      "Market4": "Наш сервис вас удивит",
+
+      "Market5": "Удобство для вас",
+      "Market6": "Быстрая обработка и гарантия возврата в случае неисправности",
+
+      "Market7": "Рассрочка",
+      "Market8": "Без предоплаты на 3, 6, 9 и 12 месяцев"
+    },
+    "FooterLinks": {
+      "link1": "Информация",
+      "link2": "Срок оплаты",
+      "link3": "Общие правила покупки в рассрочку",
+      "link4": "Как заказать?",
+      "link5": "Публичная оферта (Пользовательское соглашение)",
+      "link6": "Доставка товара и виды оплаты",
+      "link7": "Отмена заказа и возврат товара",
+
+      "link8": "Мы в социальных сетях:",
+      "link9": "Instagram",
+      "link10": "Facebook",
+      "link11": "YouTube",
+      "link12": "Telegram",
+      "link13": "Twitter",
+
+      "link14": "Связаться с нами",
+      "link15": "Интернет-магазин Cellus.uz бытовая техника и другие. Доставка продукции осуществляется во все регионы. Все права защищены."
+    },
+    "CardsDISCOUNT": {
+      "text1": "БЕСТСЕЛЛЕР",
+      "text2": "Посмотреть больше"
+    },
+    "LogoBrands_name": {
+      "Brand1": "Xiaomi",
+      "Brand2": "Iphone",
+      "Brand3": "Air pods",
+      "Brand4": "Наушники",
+      "Brand5": "Samsung",
+      "Brand6": "Ноутбуки",
+      "Brand7": "Часы",
+      "Brand8": "Аксессуары"
     }
   },
+
   "Uzbek": {
     "Header": {
       "Search": "Izlash...",
@@ -39,8 +86,55 @@
       "Loves": "Sevimlilar",
       "Translate": "Til",
       "Search": "Qidirmoq"
+    },
+    "Footer": {
+      "Market1": "Endi bozorga borishga hojat yo'q",
+      "Market2": "Bizda qulay narxlar va uyga yetkazib berish mavjud",
+
+      "Market3": "Tez yetkazib berish",
+      "Market4": "Bizning xizmatimiz sizni ajablantiradi",
+
+      "Market5": "Siz uchun qulayliklar",
+      "Market6": "Nosozlik yuzaga kelganda tez rasmiylashtirish va qaytarish kafolati",
+
+      "Market7": "Bo'lib to'lash",
+      "Market8": "3, 6, 9 va 12 oy davomida oldindan to'lovsiz"
+    },
+    "FooterLinks": {
+      "link1": "Ma'lumot",
+      "link2": "Muddati",
+      "link3": "Bo'lib-bo'lib sotib olishning umumiy qoidalari",
+      "link4": "Qanday buyurtma berish kerak?",
+      "link5": "Ommaviy taklif (foydalanuvchi shartnomasi)",
+      "link6": "Tovarlarni yetkazib berish va to'lov turlari",
+      "link7": "Buyurtmani bekor qilish va tovarlarni qaytarish",
+
+      "link8": "Biz ijtimoiy tarmoqlardamiz:",
+      "link9": "Instagram",
+      "link10": "Facebook",
+      "link11": "YouTube",
+      "link12": "Telegram",
+      "link13": "Twitter",
+
+      "link14": "Biz bilan bog'lanish",
+      "link15": "Cellus.uz maishiy texnika internet-do'koni va boshqalar. Mahsulotlarni yetkazib berish barcha hududlarda amalga oshirilmoqda. Barcha huquqlar himoyalangan."
+    },
+    "CardsDISCOUNT": {
+      "text1": "БЕСТСЕЛЛЕР",
+      "text2": "Ko'proq ko'rish"
+    },
+    "LogoBrands_name": {
+      "Brand1": "Xiaomi",
+      "Brand2": "Iphone",
+      "Brand3": "Air podslar",
+      "Brand4": "Naushniklar",
+      "Brand5": "Samsung",
+      "Brand6": "Noutbuklar",
+      "Brand7": "Soatlar",
+      "Brand8": "Aksessuarlar"
     }
   },
+
   "English": {
     "Header": {
       "Search": "Search...",
@@ -60,6 +154,52 @@
       "Loves": "Favorites",
       "Translate": "Language",
       "Search": "Search..."
+    },
+    "Footer": {
+      "Market1": "No more going to the market",
+      "Market2": "We have competitive prices and home delivery",
+
+      "Market3": "Fast delivery",
+      "Market4": "Our service will surprise you",
+
+      "Market5": "Convenience for you",
+      "Market6": "Fast processing and return guarantee in case of malfunction",
+
+      "Market7": "Installment plan",
+      "Market8": "No prepayment for 3, 6, 9 and 12 months"
+    },
+    "FooterLinks": {
+      "link1": "Information",
+      "link2": "Due date",
+      "link3": "General rules for buying in installments",
+      "link4": "How to order?",
+      "link5": "Public offer (User agreement)",
+      "link6": "Delivery of goods and types of payment",
+      "link7": "Cancellation of the order and return of goods",
+
+      "link8": "We are in social networks:",
+      "link9": "Instagram",
+      "link10": "Facebook",
+      "link11": "YouTube",
+      "link12": "Telegram",
+      "link13": "Twitter",
+
+      "link14": "Connect with us",
+      "link15": "Online store Cellus.uz household appliances and others. Delivery of products is carried out in all regions. All rights reserved."
+    },
+    "CardsDISCOUNT": {
+      "text1": "BESTSELLER",
+      "text2": "View more"
+    },
+    "LogoBrands_name": {
+      "Brand1": "Xiaomi",
+      "Brand2": "Iphone",
+      "Brand3": "Air pods",
+      "Brand4": "HeadPhone",
+      "Brand5": "Samsung",
+      "Brand6": "laptops",
+      "Brand7": "Watchs",
+      "Brand8": "Accessories"
     }
   }
 }

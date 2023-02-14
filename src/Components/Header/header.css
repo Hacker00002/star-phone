@@ -5,6 +5,11 @@
   padding-bottom: 20px;
 }
 
+.displayNone {
+  display: flex;
+  gap: 30px;
+}
+
 .header {
   width: 100%;
   background-color: #ffffff;
@@ -151,4 +156,96 @@ option {
 
 .fa-right-from-bracket {
   transform: rotate(180deg);
+}
+
+.menu {
+  display: none;
+}
+
+.close {
+  display: none;
+}
+
+/* responsive */
+@media only screen and (max-width: 1400px) {
+  .searchInput {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .displayNone {
+    gap: 17px;
+  }
+}
+
+@media only screen and (max-width: 1090px) {
+  .nav__link {
+    font-size: 20px;
+    color: #fff !important;
+  }
+  .nav__link .fa-solid,
+  .fa-regular {
+    font-size: 25px !important;
+    color: #fff;
+  }
+  option,
+  select {
+    font-size: 20px !important;
+    color: #fff !important;
+    background-color: #162e68;
+    padding: 5px;
+  }
+  .logout .fa-solid {
+    font-size: 25px;
+  }
+  .logo__svg img {
+    width: 160px;
+  }
+  .searchInput {
+    padding: 8px 30px;
+  }
+  .search .fa-solid {
+    left: 7px;
+    top: 11px;
+    font-size: 17px;
+  }
+  .search {
+    display: none;
+  }
+  .displayNone {
+    position: fixed;
+    right: 0;
+    top: 0;
+    gap: 25px;
+    width: 50%;
+    z-index: 100;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #162e68;
+    height: 100vh;
+    padding: 50px;
+    display: none;
+  }
+  .menu {
+    display: block;
+    cursor: pointer;
+  }
+  .menu .fa-solid {
+    color: #162e68;
+    font-size: 30px;
+  }
+  .close {
+    display: block;
+    cursor: pointer;
+    z-index: 100;
+  }
+  .close .fa-solid {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    color: #fff;
+    font-size: 30px;
+  }
 }

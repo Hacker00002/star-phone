@@ -1,5 +1,5 @@
 .wrappers {
-  background-color: rgba(0, 0, 0, 0.801);
+  background-color: #162e68;
   position: fixed;
   z-index: 10000;
   width: 100%;
@@ -8,119 +8,154 @@
   left: 0;
 }
 
-.profile-main-loader {
-  left: 50% !important;
-  margin-left: -100px;
-  position: fixed !important;
-  top: 50% !important;
-  margin-top: -100px;
-  width: 45px;
-  z-index: 9000 !important;
-}
+/* The loader container */
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
 
-.profile-main-loader .loader {
-  position: relative;
-  margin: 0px auto;
   width: 200px;
   height: 200px;
-}
-.profile-main-loader .loader:before {
-  content: "";
-  display: block;
-  padding-top: 100%;
+
+  margin-top: -100px;
+  margin-left: -100px;
 }
 
-.circular-loader {
-  -webkit-animation: rotate 2s linear infinite;
-  animation: rotate 2s linear infinite;
-  height: 100%;
-  -webkit-transform-origin: center center;
-  -ms-transform-origin: center center;
-  transform-origin: center center;
-  width: 100%;
+/* The dot */
+.loader > .dot {
   position: absolute;
-  top: 0;
-  left: 0;
-  margin: auto;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+
+  width: 160px;
+  height: 100px;
+
+  margin-top: -50px;
+  margin-left: -80px;
+
+  border-radius: 5px;
+
+  background-color: #1e3f57;
+
+  transform-type: preserve-3d;
+
+  animation: dot1 3s cubic-bezier(0.55, 0.3, 0.24, 0.99) infinite;
 }
 
-.loader-path {
-  stroke-dasharray: 150, 200;
-  stroke-dashoffset: -10;
-  -webkit-animation: dash 1.5s ease-in-out infinite,
-    color 6s ease-in-out infinite;
-  animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
-  stroke-linecap: round;
+.loader > .dot:nth-child(2) {
+  z-index: 11;
+
+  width: 150px;
+  height: 90px;
+
+  margin-top: -45px;
+  margin-left: -75px;
+
+  border-radius: 3px;
+
+  background-color: #3c617d;
+
+  animation-name: dot2;
 }
 
-@-webkit-keyframes rotate {
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
+.loader > .dot:nth-child(3) {
+  z-index: 12;
+
+  width: 40px;
+  height: 20px;
+
+  margin-top: 50px;
+  margin-left: -20px;
+
+  border-radius: 0 0 5px 5px;
+
+  background-color: #6bb2cd;
+
+  animation-name: dot3;
+}
+
+@keyframes dot1 {
+  3%,
+  97% {
+    width: 160px;
+    height: 100px;
+
+    margin-top: -50px;
+    margin-left: -80px;
+  }
+  30%,
+  36% {
+    width: 80px;
+    height: 120px;
+
+    margin-top: -60px;
+    margin-left: -40px;
+  }
+  63%,
+  69% {
+    width: 40px;
+    height: 80px;
+
+    margin-top: -40px;
+    margin-left: -20px;
   }
 }
 
-@keyframes rotate {
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
+@keyframes dot2 {
+  3%,
+  97% {
+    width: 150px;
+    height: 90px;
+
+    margin-top: -45px;
+    margin-left: -75px;
+  }
+  30%,
+  36% {
+    width: 70px;
+    height: 96px;
+
+    margin-top: -48px;
+    margin-left: -35px;
+  }
+  63%,
+  69% {
+    width: 32px;
+    height: 60px;
+
+    margin-top: -30px;
+    margin-left: -16px;
   }
 }
-@-webkit-keyframes dash {
-  0% {
-    stroke-dasharray: 1, 200;
-    stroke-dashoffset: 0;
+
+@keyframes dot3 {
+  3%,
+  97% {
+    width: 40px;
+    height: 20px;
+
+    margin-top: 50px;
+    margin-left: -20px;
   }
-  50% {
-    stroke-dasharray: 89, 200;
-    stroke-dashoffset: -35;
+  30%,
+  36% {
+    width: 8px;
+    height: 8px;
+
+    margin-top: 49px;
+    margin-left: -5px;
+
+    border-radius: 8px;
   }
-  100% {
-    stroke-dasharray: 89, 200;
-    stroke-dashoffset: -124;
-  }
-}
-@keyframes dash {
-  0% {
-    stroke-dasharray: 1, 200;
-    stroke-dashoffset: 0;
-  }
-  50% {
-    stroke-dasharray: 89, 200;
-    stroke-dashoffset: -35;
-  }
-  100% {
-    stroke-dasharray: 89, 200;
-    stroke-dashoffset: -124;
-  }
-}
-@-webkit-keyframes color {
-  0% {
-    stroke: #008dff;
-  }
-  40% {
-    stroke: #008dff;
-  }
-  66% {
-    stroke: #008dff;
-  }
-  80%,
-  90% {
-    stroke: #008dff;
-  }
-}
-@keyframes color {
-  0% {
-    stroke: #008dff;
-  }
-  40% {
-    stroke: #008dff;
-  }
-  66% {
-    stroke: #008dff;
-  }
-  80%,
-  90% {
-    stroke: #008dff;
+  63%,
+  69% {
+    width: 16px;
+    height: 4px;
+
+    margin-top: -37px;
+    margin-left: -8px;
+
+    border-radius: 10px;
   }
 }

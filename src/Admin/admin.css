@@ -2,10 +2,12 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
-  height: 450px;
+  height: 440px;
   overflow: scroll;
   margin-top: 35px;
-  padding: 10px;
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.052);
 }
 
 input {
@@ -15,6 +17,7 @@ input {
   color: #008dff !important;
   font-size: 17px;
   border: 2px solid #008dff;
+  width: 100%;
 }
 
 input::placeholder {
@@ -45,6 +48,7 @@ input::placeholder {
   font-size: 17px;
   background-color: #fff;
   transition: all 0.3s ease;
+  width: 100%;
 }
 
 .btn button:hover {
@@ -56,6 +60,14 @@ input::placeholder {
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-top: 30px;
+}
+
+.admin__father a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 30px;
 }
 
 h1 img {
@@ -64,7 +76,7 @@ h1 img {
 
 .div {
   display: flex;
-  gap: 10px;
+  flex-direction: column;
   padding-top: 175px;
 }
 
@@ -150,16 +162,6 @@ h1 img {
   top: 2px;
 }
 
-.card {
-  padding-top: 20px;
-  padding-bottom: 50px;
-  padding-left: 70px;
-  padding-right: 10px;
-  height: 550px;
-  overflow: scroll;
-  border-radius: 15px;
-}
-
 #edit__father {
   position: fixed;
   z-index: 1200;
@@ -207,4 +209,84 @@ h1 img {
   font-size: 25px;
   color: #008dff;
   cursor: pointer;
+}
+
+.discBtn {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 50px;
+}
+
+.discounts {
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.052);
+  border-radius: 20px;
+  padding: 10px;
+  display: flex;
+  margin-top: 50px;
+  width: 650px;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardsFather {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 550px;
+  overflow: scroll;
+  margin-top: 100px;
+  padding: 15px;
+  box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.052);
+  border-radius: 20px;
+}
+
+#admin__form h1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cards__img img {
+  width: 100px !important;
+}
+
+.TopProducts {
+  font-size: 25px !important;
+}
+
+.addTops {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* top posts */
+
+.top__posts {
+  position: relative;
+}
+
+#add__top {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: 440px;
+  overflow: scroll;
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.052);
+}
+
+.top__posts .fa-solid {
+  position: absolute;
+  font-size: 20px;
+  color: #008dff;
+  top: 15px;
+  left: 10px;
 }

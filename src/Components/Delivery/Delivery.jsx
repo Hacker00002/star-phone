@@ -19,15 +19,8 @@ const DeliveryPage = () => {
               <h3>Delivery service only in Tashkent city</h3>
             </div>
             <div className="text__services">
-              <i class="fa-solid fa-money-bill-1-wave"></i>
-              <h3>
-                Delivery service 25,000 uzs and 10,000 uzs to nearby
-                destinations
-              </h3>
-            </div>
-            <div className="text__services">
               <img src={IconDelivery} alt="" />
-              <h3>50% discount on delivery to our regular customers</h3>
+              <h3>Delivery service is 100% free</h3>
             </div>
             <div className="text__services">
               <i class="fa-solid fa-road-circle-xmark"></i>

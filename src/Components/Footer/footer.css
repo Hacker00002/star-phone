@@ -82,4 +82,13 @@
   justify-content: center;
   align-items: center;
   gap: 5px;
+  border-top: 1.5px solid #fff;
+  padding-top: 15px;
+}
+
+.logoPayments {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
 }

@@ -12,6 +12,7 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   const { lang, setLanguage } = useContext(languageContext);
+  const [close, setClose] = useState(false);
 
   const { user, logOut } = UserAuth();
   const [users, setUsers] = useState(null);
@@ -22,6 +23,10 @@ const Header = () => {
       console.log(error);
     }
   };
+
+  function closeItem() {
+    setClose(true);
+  }
 
   const [content, setContent] = useState({});
 
@@ -71,57 +76,63 @@ const Header = () => {
             </div>
             <nav className="navbar">
               <ul className="nav__list">
-                <li className="nav__list-item">
-                  <a href="#" className="nav__link">
-                    <i class="fa-regular icons fa-credit-card"></i>
-                    {content?.Settings?.Payments}
-                  </a>
-                </li>
-                <li className="nav__list-item">
-                  <Link to={"/Delivery"}>
-                    <a href="/" className="nav__link">
-                      <i class="fa-solid icons fa-truck-ramp-box"></i>
-                      {content?.Settings?.Delivery}
-                    </a>
-                  </Link>
-                </li>
-                <li className="nav__list-item">
-                  <Link to={"/Location"}>
-                    <a href="/" className="nav__link">
-                      <i class="fa-solid icons fa-map-location-dot"></i>
-                      {content?.Settings?.Address}
-                    </a>
-                  </Link>
-                </li>
-                <li className="nav__list-item">
-                  <a href="#" className="nav__link">
-                    <i class="fa-solid icons fa-cart-shopping"></i>
-                    {content?.Settings?.Shop}
-                  </a>
-                </li>
-                <li className="nav__list-item">
-                  <a href="#" className="nav__link">
-                    <i class="fa-regular icons fa-heart"></i>
-                    {content?.Settings?.Loves}
-                  </a>
-                </li>
-                <li className="nav__list-item">
-                  <a href="#" className="nav__link">
-                    <i class="fa-solid icons fa-globe"></i>
-                    <select
-                      value={lang}
-                      onChange={(evt) => {
-                        setLanguage(evt.target.value);
-                      }}
-                    >
-                      <option>language</option>
-                      <option>Russian</option>
-                      <option>English</option>
-                      <option>Uzbek</option>
-                    </select>
-                  </a>
-                </li>
-
+                {!close && (
+                  <div className="displayNone">
+                    <div onClick={closeItem} className="close">
+                      <i class="fa-solid fa-xmark"></i>
+                    </div>
+                    <li className="nav__list-item">
+                      <a href="#" className="nav__link">
+                        <i class="fa-regular icons fa-credit-card"></i>
+                        {content?.Settings?.Payments}
+                      </a>
+                    </li>
+                    <li className="nav__list-item">
+                      <Link to={"/Delivery"}>
+                        <a href="/" className="nav__link">
+                          <i class="fa-solid icons fa-truck-ramp-box"></i>
+                          {content?.Settings?.Delivery}
+                        </a>
+                      </Link>
+                    </li>
+                    <li className="nav__list-item">
+                      <Link to={"/Location"}>
+                        <a href="/" className="nav__link">
+                          <i class="fa-solid icons fa-map-location-dot"></i>
+                          {content?.Settings?.Address}
+                        </a>
+                      </Link>
+                    </li>
+                    <li className="nav__list-item">
+                      <a href="#" className="nav__link">
+                        <i class="fa-solid icons fa-cart-shopping"></i>
+                        {content?.Settings?.Shop}
+                      </a>
+                    </li>
+                    <li className="nav__list-item">
+                      <a href="#" className="nav__link">
+                        <i class="fa-regular icons fa-heart"></i>
+                        {content?.Settings?.Loves}
+                      </a>
+                    </li>
+                    <li className="nav__list-item">
+                      <div className="nav__link">
+                        <i class="fa-solid icons fa-globe"></i>
+                        <select
+                          value={lang}
+                          onChange={(evt) => {
+                            setLanguage(evt.target.value);
+                          }}
+                        >
+                          <option>language</option>
+                          <option>Russian</option>
+                          <option>English</option>
+                          <option>Uzbek</option>
+                        </select>
+                      </div>
+                    </li>
+                  </div>
+                )}
                 {user?.displayName ? (
                   <div className="logout__father">
                     {/* <button
@@ -169,6 +180,9 @@ const Header = () => {
                     </Link>
                   </li>
                 )}
+                <div onClick={closeItem} className="menu">
+                  <i class="fa-solid fa-bars"></i>
+                </div>
               </ul>
             </nav>
           </div>

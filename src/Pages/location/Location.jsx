@@ -8,7 +8,6 @@ import Maps from "../../google-maps/Maps";
 const Location = () => {
   const [email, setEmail] = useState("");
   const [tel, setTel] = useState("");
-  const [userName, setUserName] = useState("");
   const emailText = useRef(null);
   const telText = useRef(null);
 
@@ -131,7 +130,7 @@ const Location = () => {
         />
         <ToastContainer />
         <div className="maps__text">
-          <h2>Our address</h2>
+          <h2>Our addresses</h2>
           <Maps />
         </div>
       </div>

@@ -1,4 +1,5 @@
 .cards {
+  position: relative;
   gap: 25px;
   display: flex;
   flex-wrap: wrap;
@@ -71,12 +72,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 
 .card__text p {
   font-size: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .price h6 {
@@ -134,4 +135,63 @@
 }
 .btn-15:active {
   top: 2px;
+}
+
+.paginationBttn {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  position: absolute;
+  z-index: 100;
+  bottom: -30px;
+  right: 0;
+  cursor: pointer;
+}
+
+.paginationBttn .fa-solid {
+  background-color: #162e68;
+  padding: 10px;
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.paginationActive a {
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px 9px;
+  border-radius: 30%;
+  background-color: orange;
+}
+
+.container .newsPro {
+  color: #162e68;
+  margin-top: 70px;
+  margin-bottom: 20px;
+}
+
+.like .fa-regular {
+  background-color: #162e68;
+  padding: 5px;
+  color: #fff;
+  padding: 3px 4px 3px;
+  border-radius: 10px;
+  border: 2px solid #162e68;
+  transition: all 0.3s ease;
+}
+
+.like .fa-regular:hover {
+  background-color: #fff;
+  color: #162e68;
+}
+
+.like .fa-regular:active {
+  opacity: 0.3;
+  transition: 0s;
+}
+
+.shop:active {
+  opacity: 0.3;
+  transition: 0s;
 }

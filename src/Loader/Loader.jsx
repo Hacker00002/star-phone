@@ -5,17 +5,10 @@ const Loader = () => {
     <div className="container">
       <div className="wrappers">
         <div className="profile-main-loader">
-          <div className="loader">
-            <svg className="circular-loader" viewBox="25 25 50 50">
-              <circle
-                className="loader-path"
-                cx="50"
-                cy="50"
-                r="20"
-                fill="none"
-                stroke-width="2"
-              />
-            </svg>
+          <div class="loader">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
           </div>
         </div>
       </div>

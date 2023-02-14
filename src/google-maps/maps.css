@@ -1,6 +1,6 @@
 .maps {
   display: flex;
-  justify-content: space-between;
+  gap: 20px;
   margin-top: 25px;
   margin-bottom: 25px;
 }
@@ -29,4 +29,13 @@
 .work span,
 a {
   color: #000;
+}
+
+.mapsFathers {
+  display: flex;
+  flex-direction: column;
+}
+
+.maps2 iframe {
+  width: 100%;
 }

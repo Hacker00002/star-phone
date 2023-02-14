@@ -23,7 +23,7 @@ const Users = () => {
             Hello: {user?.displayName ? user?.displayName : "No information"}
           </h2>
           <div className="id">
-            <p>ID:A526356</p>
+            <p>ID:{user.uid}</p>
             <i class="fa-solid fa-id-card"></i>
           </div>
           <div className="server">

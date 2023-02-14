@@ -76,7 +76,7 @@ const Required = () => {
         <div className="delivery__payments-text">
           <div className="delivery__pr">
             <p>
-              Orders placed through the Asaxiy.uz website are delivered
+              Orders placed through the Cellus.uz website are delivered
               throughout Tashkent.
             </p>
           </div>
